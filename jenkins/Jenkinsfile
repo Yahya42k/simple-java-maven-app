@@ -7,15 +7,13 @@ tools {
 
     maven 'mymaven'
 }
-environment {
-        GIT_CREDENTIALS = credentials('devServer')
-    }
+
         stages{
 
             stage('build'){
 
                 steps{
-                     git credentialsId: GIT_CREDENTIALS, url: 'git@github.com:Yahya42k/simple-java-maven-app.git'
+                    
                     sh 'mvn clean package'
                 }
                 post {
