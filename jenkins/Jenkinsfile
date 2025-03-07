@@ -6,6 +6,14 @@ pipeline{
 
  stages{
 
+  stage('Preparation'){
+   steps{
+sh 'whoami;pwd'
+  
+    
+   }
+  }
+
   stage('Build stage'){
    steps{
     sh 'mvn clean package'
