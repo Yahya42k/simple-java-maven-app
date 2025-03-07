@@ -1,4 +1,40 @@
 pipeline{
+ agent any
+
+   stages{
+   stage('build'){
+
+        steps{
+       echo "We are in build stage"   
+             }
+      
+                 }
+      stage('Test'){
+         steps{
+            echo "We are in Testing stage"
+         }
+      }
+
+      stage('Deploy'){
+         steps{
+            echo "We are in Deploy stage"
+         }
+      }
+
+      stage('Script Run'){
+         steps{
+            sh '.jenkins/scripts/successmsg.sh'
+         }
+      }
+
+      
+   }
+
+   
+}
+
+
+/* pipeline{
    agent {
   label 'devServer'
 }
@@ -55,7 +91,7 @@ stage('test'){
         }
     
 }
-
+*/
 
 /* pipeline {
     agent {
