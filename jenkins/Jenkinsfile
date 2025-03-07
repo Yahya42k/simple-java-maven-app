@@ -18,8 +18,8 @@ pipeline{
       stage('Deploy'){
          steps{
             echo "We are in Deploy stage"
-             sh 'pwd'
-             sh 'whoami'
+             sh 'pwd;whoami'
+            
              sh 'chmod +x ./jenkins/scripts/successmsg.sh '
          }
       }
