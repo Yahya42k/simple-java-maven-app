@@ -19,6 +19,7 @@ pipeline{
          steps{
             echo "We are in Deploy stage"
              sh 'pwd'
+             sh 'whoami'
          }
       }
 
