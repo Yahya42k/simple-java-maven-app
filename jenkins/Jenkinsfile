@@ -84,17 +84,18 @@ stage('test'){
             
         }
     }
-    post {
-      success {
-       archiveArtifacts artifacts: '**/target/*.jar'
-         }
-           }
-}
+    */
+   // post {
+   //   success {
+   //    archiveArtifacts artifacts: '**/target/*.jar'
+   //      }
+   //        }
+//}
            
-        }
+//        }
     
-}
-*/
+//}
+
 
 /* pipeline {
     agent {
