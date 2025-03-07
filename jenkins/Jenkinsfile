@@ -20,6 +20,7 @@ pipeline{
             echo "We are in Deploy stage"
              sh 'pwd'
              sh 'whoami'
+             sh 'chmod +x ./jenkins/scripts/successmsg.sh '
          }
       }
 
