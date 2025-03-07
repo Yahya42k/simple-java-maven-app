@@ -18,6 +18,7 @@ pipeline{
       stage('Deploy'){
          steps{
             echo "We are in Deploy stage"
+             sh 'pwd'
          }
       }
 
