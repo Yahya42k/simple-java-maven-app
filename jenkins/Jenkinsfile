@@ -1,3 +1,29 @@
+
+pipeline{
+ agent {
+  label 'server1'
+ }
+
+ stages{
+
+  stage('Build stage'){
+   steps{
+    sh 'mvn clean package'
+   }
+   post {
+  success {
+    archiveArtifacts artifacts: '**/target/*.jar'
+  }
+}
+  }
+  
+ }
+
+ 
+}
+
+
+/*
 pipeline{
  agent any
 
@@ -36,6 +62,7 @@ pipeline{
    
 }
 
+*/
 
 /* pipeline{
    agent {
