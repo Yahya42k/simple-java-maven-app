@@ -24,7 +24,7 @@ pipeline{
 
       stage('Script Run'){
          steps{
-            sh '.jenkins/scripts/successmsg.sh'
+            sh './jenkins/scripts/successmsg.sh'
          }
       }
 
