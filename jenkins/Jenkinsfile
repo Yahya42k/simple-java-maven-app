@@ -16,7 +16,7 @@ tools {
              steps {
              withSonarQubeEnv('sonarqubev25.3.0.104237'){
            
-                sh 'mvn sonar:sonar'
+                sh  sh 'mvn sonar:sonar -Dsonar.projectKey=sonarqube-token'
             }
              }
         }
