@@ -13,8 +13,9 @@ tools {
         }
 
         stage('Sonar analysis') {
+             steps {
              withSonarQubeEnv('sonarqubev25.3.0.104237'){
-            steps {
+           
                 sh 'mvn sonar:sonar'
             }
              }
