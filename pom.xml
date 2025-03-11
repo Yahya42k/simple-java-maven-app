@@ -17,9 +17,9 @@
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-   
+   <sonar.projectKey>my-app</sonar.projectKey>
     <sonar.host.url>http://52.138.53.253:9000</sonar.host.url>
-
+   <sonar.login>sqp_9877a04630a8042dd306767cbdc52e139471a08d</sonar.login>
   </properties>
   <build>
     <pluginManagement>
