@@ -1,4 +1,25 @@
+pipeline{
 
+ agent{
+  label 'server1'
+ }
+
+ stages{
+
+  stage('Build stage'){
+
+   steps{
+
+    sh 'mvn clean package'
+   }
+  }
+
+  stage('Sonar analysis')
+  sh 'mvn sonar:sonar'
+  
+ }
+ 
+}
 
 
 /*
