@@ -1,36 +1,4 @@
 
-pipeline{
- agent {
-  label 'server1'
- }
-tools {
-  maven 'mymaven'
-}
- stages{
-
-  stage('Preparation'){
-   steps{
-sh 'whoami;pwd'
-  
-    
-   }
-  }
-
-  stage('Build stage'){
-   steps{
-    sh 'mvn clean package'
-   }
-   post {
-  success {
-    archiveArtifacts artifacts: '**/target/*.jar'
-  }
-}
-  }
-  
- }
-
- 
-}
 
 
 /*
