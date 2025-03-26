@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'server1'
+        label 'azure-agent'
     }
 tools {
   maven 'mymaven'
@@ -12,14 +12,12 @@ tools {
             }
         }
 
-        stage('Sonar analysis') {
-             steps {
-             withSonarQubeEnv('sonarqubev25.3.0.104237'){
-           
-                sh 'mvn sonar:sonar '
+        stage('Test') {
+            steps {
+                sh 'mvn test'
             }
-             }
-        }
+
+
     }
 }
 
