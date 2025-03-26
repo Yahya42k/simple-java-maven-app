@@ -8,7 +8,7 @@ tools {
     stages {
         stage('Build stage') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn'
             }
         }
 
