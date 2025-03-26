@@ -16,8 +16,7 @@ tools {
             steps {
                 sh 'mvn test'
             }
-
-
+        }
     }
 }
 
